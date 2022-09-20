@@ -1,0 +1,33 @@
+:root{
+    --tx-phone-:Green;
+    --tx-mail-:red;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.right{
+    text-align: right;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+a:hover{
+    color: chartreuse;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.map{
+    background-color: goldenrod;
+    margin: 5%;
+    height: 80vh;
+}
+.tx-green-h:hover{
+    color:var(--tx-phone-);
+}
+.tx-red-h:hover{
+    color:var(--tx-mail-);
+}

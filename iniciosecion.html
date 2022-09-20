@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="res/frameworks/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1>LOGO</h1></a>
+        <div class="right">
+            <a href="index.html">inicio</a>
+            <a href="">Sobre Nosotros</a> 
+            <a href="iniciosecion.html">iniciar sesion</a> 
+            <a href="">registrarse</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Iniciar sesion</h1>
+        <form action="" method="post" novalidate class="needs-validation">
+            <div>
+                <label for="user" class="form-label">usuario</label><br>
+                <input type="text" class="form-control" required name="user"><br>
+                <div class="invalid-feedback">
+                    Revise su usuario y intente nuevamente
+                </div>
+                <div class="valid-feedback">
+                    usuario correto
+                </div>
+                <label for="pass" class="form-label">Contraseña</label><br>
+                <input type="password" name="pass" id="" required class="form-control"><br>
+                <div class="invalid-feedback">
+                    Revise su contraseña y intente nuevamente
+                </div>
+                <div class="valid-feedback">
+                    contraseña correto
+                </div>
+                <input type="submit" value="Iniciar sesion" class="btn btn-primary">
+            </div>
+        </form>
+        <a href="">¿Olvido su usuario o contraseña?</a>
+    </div>
+    <script>
+        // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+        (function () {
+            'use strict'
+
+            // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Bucle sobre ellos y evitar el envío
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <script src="res/frameworks/bootstrap-4.4.1-dist/js/bootstrap.js.map"></script>
+</body>
+
+</html>
